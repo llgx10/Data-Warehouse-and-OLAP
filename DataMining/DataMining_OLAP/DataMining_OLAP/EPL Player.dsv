@@ -1,0 +1,148 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="23ab1af2-bcd0-4e92-a5f1-5b6da01caf29" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>EPL Player</ID>
+  <Name>EPL Player</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>EPL Player</DataSourceID>
+  <Schema>
+    <xs:schema id="EPL_x0020_Player" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="EPL_x0020_Player" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="77238893-d58e-4585-9121-b3e795755bff">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_pl_15-16" msprop:design-time-name="dd222297-a955-44b0-bf07-a4c1bf097b0e" msprop:DbTableName="pl_15-16" msprop:FriendlyName="pl_15-16" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="column1" msprop:design-time-name="617bb24b-529a-4081-884f-76a792f2f341" msprop:DbColumnName="column1" msprop:FriendlyName="column1" type="xs:short" />
+                  <xs:element name="Name" msprop:design-time-name="d6bd5086-d01f-4f8c-9f21-da56f18ed0d9" msprop:DbColumnName="Name" msprop:FriendlyName="Name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Position" msprop:design-time-name="251e2ad7-4df1-44b5-bd41-e0b6bffe5307" msprop:DbColumnName="Position" msprop:FriendlyName="Position" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Appearances" msprop:design-time-name="0c226ee8-5e6f-4ba0-aab1-0669b299d831" msprop:DbColumnName="Appearances" msprop:FriendlyName="Appearances" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Clean_sheets" msprop:design-time-name="24b78aa5-612b-4552-bd7b-138a1606dc63" msprop:DbColumnName="Clean_sheets" msprop:FriendlyName="Clean_sheets" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goals_conceded" msprop:design-time-name="c0730bf8-a810-4a4b-938b-9ba59902b8e4" msprop:DbColumnName="Goals_conceded" msprop:FriendlyName="Goals_conceded" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Tackles" msprop:design-time-name="6dc6f410-a7eb-4078-a34c-b00bec9cb1c7" msprop:DbColumnName="Tackles" msprop:FriendlyName="Tackles" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Tackle_success" msprop:design-time-name="6b2af7a0-37d9-4b8c-81bc-efd9ac757b47" msprop:DbColumnName="Tackle_success" msprop:FriendlyName="Tackle_success" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Last_man_tackles" msprop:design-time-name="d21892bc-6097-46d1-b413-d683bd464c1d" msprop:DbColumnName="Last_man_tackles" msprop:FriendlyName="Last_man_tackles" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Blocked_shots" msprop:design-time-name="98d3d86f-adb0-41c1-a376-b47d2f214eb4" msprop:DbColumnName="Blocked_shots" msprop:FriendlyName="Blocked_shots" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Interceptions" msprop:design-time-name="5bbf053a-3d2e-4882-9120-7d09a3162922" msprop:DbColumnName="Interceptions" msprop:FriendlyName="Interceptions" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Clearances" msprop:design-time-name="703e3441-ec84-40ee-9698-a170bb799bb6" msprop:DbColumnName="Clearances" msprop:FriendlyName="Clearances" type="xs:short" minOccurs="0" />
+                  <xs:element name="Headed_Clearance" msprop:design-time-name="c1442229-1c1b-4c6e-b02f-fca46b939f35" msprop:DbColumnName="Headed_Clearance" msprop:FriendlyName="Headed_Clearance" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Clearances_off_line" msprop:design-time-name="2ad99e62-6b30-4f4a-93de-ecedb5763cbe" msprop:DbColumnName="Clearances_off_line" msprop:FriendlyName="Clearances_off_line" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Recoveries" msprop:design-time-name="e488504d-292c-4a59-9811-67547a7b1d54" msprop:DbColumnName="Recoveries" msprop:FriendlyName="Recoveries" type="xs:short" minOccurs="0" />
+                  <xs:element name="Duels_won" msprop:design-time-name="36cbcabc-3cf6-41c1-877f-e10046346f11" msprop:DbColumnName="Duels_won" msprop:FriendlyName="Duels_won" type="xs:short" minOccurs="0" />
+                  <xs:element name="Duels_lost" msprop:design-time-name="552cc8eb-8b65-41b1-b43d-78a259912b69" msprop:DbColumnName="Duels_lost" msprop:FriendlyName="Duels_lost" type="xs:short" minOccurs="0" />
+                  <xs:element name="Successful_50_50s" msprop:design-time-name="126b7cc8-4819-4653-8ab7-320509817a30" msprop:DbColumnName="Successful_50_50s" msprop:FriendlyName="Successful_50_50s" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Aerial_battles_won" msprop:design-time-name="27947f43-84e9-470e-ba84-2de93466647d" msprop:DbColumnName="Aerial_battles_won" msprop:FriendlyName="Aerial_battles_won" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Aerial_battles_lost" msprop:design-time-name="637ac3a9-67f1-4731-b457-69be32c32810" msprop:DbColumnName="Aerial_battles_lost" msprop:FriendlyName="Aerial_battles_lost" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Own_goals" msprop:design-time-name="9f6abba9-423f-42e6-a6ea-79307802c259" msprop:DbColumnName="Own_goals" msprop:FriendlyName="Own_goals" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Errors_leading_to_goal" msprop:design-time-name="98ce29b3-fb8a-4296-99a6-e3e587dd3528" msprop:DbColumnName="Errors_leading_to_goal" msprop:FriendlyName="Errors_leading_to_goal" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Assists" msprop:design-time-name="120f649d-9466-4e77-afac-01763a363541" msprop:DbColumnName="Assists" msprop:FriendlyName="Assists" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Passes" msprop:design-time-name="3b080733-1128-4cb8-877e-9cb475adde8e" msprop:DbColumnName="Passes" msprop:FriendlyName="Passes" type="xs:short" minOccurs="0" />
+                  <xs:element name="Passes_per_match" msprop:design-time-name="6cedddaa-554a-44a2-8d91-6d2877ef9d6c" msprop:DbColumnName="Passes_per_match" msprop:FriendlyName="Passes_per_match" type="xs:double" minOccurs="0" />
+                  <xs:element name="Big_chances_created" msprop:design-time-name="57fad00b-d90c-4c60-8e84-f6697928947b" msprop:DbColumnName="Big_chances_created" msprop:FriendlyName="Big_chances_created" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Crosses" msprop:design-time-name="0acf2589-7102-4193-a3e8-3072453330c8" msprop:DbColumnName="Crosses" msprop:FriendlyName="Crosses" type="xs:short" minOccurs="0" />
+                  <xs:element name="Cross_accuracy" msprop:design-time-name="bd275b96-0f77-481e-adb1-fd25614d7a41" msprop:DbColumnName="Cross_accuracy" msprop:FriendlyName="Cross_accuracy" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Through_balls" msprop:design-time-name="87e80c3d-6a0c-4e28-a4ac-f5bd4d6e85ab" msprop:DbColumnName="Through_balls" msprop:FriendlyName="Through_balls" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Accurate_long_balls" msprop:design-time-name="faba5bff-3cbf-4a7b-b0d3-570e0475a059" msprop:DbColumnName="Accurate_long_balls" msprop:FriendlyName="Accurate_long_balls" type="xs:short" minOccurs="0" />
+                  <xs:element name="Yellow_cards" msprop:design-time-name="7a078142-127c-4ed5-be73-a4f1c8b44dc5" msprop:DbColumnName="Yellow_cards" msprop:FriendlyName="Yellow_cards" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Red_cards" msprop:design-time-name="d6f63908-6f01-4575-aeca-d232ae90d281" msprop:DbColumnName="Red_cards" msprop:FriendlyName="Red_cards" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Fouls" msprop:design-time-name="e26fb473-bf36-439c-930c-6c2ae1bf6ccf" msprop:DbColumnName="Fouls" msprop:FriendlyName="Fouls" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Offsides" msprop:design-time-name="c27e0092-7317-40c6-b526-5d1758200486" msprop:DbColumnName="Offsides" msprop:FriendlyName="Offsides" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goals" msprop:design-time-name="2ee89ff2-1c36-411c-b219-c7a42ce41a0f" msprop:DbColumnName="Goals" msprop:FriendlyName="Goals" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Headed_goals" msprop:design-time-name="69fae629-5e2c-4b3a-a4c7-69d7cc1f3c99" msprop:DbColumnName="Headed_goals" msprop:FriendlyName="Headed_goals" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goals_with_right_foot" msprop:design-time-name="403bfb8a-c4ef-4125-b4d8-32e90d31853a" msprop:DbColumnName="Goals_with_right_foot" msprop:FriendlyName="Goals_with_right_foot" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goals_with_left_foot" msprop:design-time-name="501e3b15-1121-4f31-809c-92716c4c8081" msprop:DbColumnName="Goals_with_left_foot" msprop:FriendlyName="Goals_with_left_foot" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Hit_woodwork" msprop:design-time-name="0af8db83-dafa-4a68-9bc8-37bd0b52efe0" msprop:DbColumnName="Hit_woodwork" msprop:FriendlyName="Hit_woodwork" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goals_per_match" msprop:design-time-name="7c0d05ab-6751-46cd-a997-e93f0116e597" msprop:DbColumnName="Goals_per_match" msprop:FriendlyName="Goals_per_match" type="xs:double" minOccurs="0" />
+                  <xs:element name="Penalties_scored" msprop:design-time-name="ca78ec39-8a17-411b-8981-e25d7947b0b2" msprop:DbColumnName="Penalties_scored" msprop:FriendlyName="Penalties_scored" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Freekicks_scored" msprop:design-time-name="422cd56a-f45a-46ea-b77e-c298a2454f72" msprop:DbColumnName="Freekicks_scored" msprop:FriendlyName="Freekicks_scored" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Shots" msprop:design-time-name="1351743a-7669-461a-a6b9-afc63e31356a" msprop:DbColumnName="Shots" msprop:FriendlyName="Shots" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Shots_on_target" msprop:design-time-name="39b7530a-4e17-4b5d-8d44-4d5cd0e443cc" msprop:DbColumnName="Shots_on_target" msprop:FriendlyName="Shots_on_target" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Shooting_accuracy" msprop:design-time-name="6370d59e-dbda-434e-b95c-182b020cd20c" msprop:DbColumnName="Shooting_accuracy" msprop:FriendlyName="Shooting_accuracy" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Big_chances_missed" msprop:design-time-name="8eb7f760-b771-40e5-be3b-05b1052abc8e" msprop:DbColumnName="Big_chances_missed" msprop:FriendlyName="Big_chances_missed" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Saves" msprop:design-time-name="424a4434-51e7-447e-91bf-9863f0f09594" msprop:DbColumnName="Saves" msprop:FriendlyName="Saves" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Penalties_saved" msprop:design-time-name="3a22da3b-abdc-4fa3-8f87-8a517ab79a83" msprop:DbColumnName="Penalties_saved" msprop:FriendlyName="Penalties_saved" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Punches" msprop:design-time-name="e8c3a6d6-bb87-4e6e-93dd-9c8ccafae3c9" msprop:DbColumnName="Punches" msprop:FriendlyName="Punches" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="High_Claims" msprop:design-time-name="fc0585b3-5630-4ff6-b925-8fef98e42d8d" msprop:DbColumnName="High_Claims" msprop:FriendlyName="High_Claims" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Catches" msprop:design-time-name="a9af1454-1bc6-46aa-99bb-58716c89569e" msprop:DbColumnName="Catches" msprop:FriendlyName="Catches" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Sweeper_clearances" msprop:design-time-name="f27837bc-bf47-4e1c-900f-383d6b86d736" msprop:DbColumnName="Sweeper_clearances" msprop:FriendlyName="Sweeper_clearances" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Throw_outs" msprop:design-time-name="aa68b8d0-a7cb-4bd0-a7be-11063349db32" msprop:DbColumnName="Throw_outs" msprop:FriendlyName="Throw_outs" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="Goal_Kicks" msprop:design-time-name="b357351e-1209-4ab3-a3d4-dab9b969e13f" msprop:DbColumnName="Goal_Kicks" msprop:FriendlyName="Goal_Kicks" type="xs:short" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_pl_15-16" />
+          <xs:field xpath="Name" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <EPL_x0020_Player xmlns="" />
+  </Schema>
+</DataSourceView>

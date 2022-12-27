@@ -1,0 +1,975 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a482e5c5-7c7e-43b0-9022-ef8c54c48f6f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Player position</ID>
+  <Name>Player position</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_pl_15-16</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ea16e4e4-f4fc-4424-ac71-7f632ea8ec34">
+    <DataSourceViewID>EPL Player</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2672bbfa-91f9-427b-8eed-4a5d7c3608b5">
+      <ID>Assists</ID>
+      <Name>Assists</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="45236351-1590-4afb-b8fe-c6dd17edc452">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49ae005d-3af1-4c71-9fe1-f26972097914">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Assists</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="56010afd-9e83-4264-9317-be91084d4d60">
+      <ID>Big Chances Created</ID>
+      <Name>Big Chances Created</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f63482c-cbbd-46db-b2dc-9ae34d5c5d25">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d15f653a-8201-4c3f-b6cf-22c20ffb9c2b">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Big_chances_created</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="da95cafe-3ceb-4e81-8695-28fd526172cb">
+      <ID>Big Chances Missed</ID>
+      <Name>Big Chances Missed</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8db19142-abe6-4d90-9dfd-d781d7914b16">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f52ee302-e975-4497-b685-26451dfdd49e">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Big_chances_missed</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cbac0a9d-d371-4589-a544-e8a8279bdb74">
+      <ID>Blocked Shots</ID>
+      <Name>Blocked Shots</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="741d823f-1ba3-4037-bcc6-3b40752d91d5">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="90e61f6d-94b5-424a-90d8-e04106d245ad">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Blocked_shots</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fa93e845-b8ed-4a81-8a47-ea549cf8678d">
+      <ID>Catches</ID>
+      <Name>Catches</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="db457f47-3835-4af6-b2da-e989c0d78555">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb138957-f0f6-475c-8b51-dd4a78d1bb13">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Catches</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e0753dc0-f294-406a-a938-9c5b27896e22">
+      <ID>Clean Sheets</ID>
+      <Name>Clean Sheets</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0e1efe8d-a94e-4d89-9c7c-fd0edc0fe035">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56ad6e19-278d-4dc1-8215-c38cbfe72ca1">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Clean_sheets</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b89762eb-f5db-4a29-9f7c-8ad9d40a3314">
+      <ID>Clearances Off Line</ID>
+      <Name>Clearances Off Line</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8db1bea-f088-4da9-9c09-5c6910c52660">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="338cb30f-ab0f-44cd-8db9-4dd71dfde87e">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Clearances_off_line</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ba18acb7-2f87-4cd5-9b2c-38b2218e1466">
+      <ID>Cross Accuracy</ID>
+      <Name>Cross Accuracy</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="36411b3c-fbfb-4ac6-9ac4-f206e7b6537e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e6a1f60-9109-4720-b50b-15c5162aa34c">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Cross_accuracy</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="43fe4533-01de-4cd9-a3d6-e76087359df3">
+      <ID>Errors Leading To Goal</ID>
+      <Name>Errors Leading To Goal</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d10c118-6230-4958-a9f4-50dd59c33c80">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="97476f79-af9d-4059-900e-2764286bc090">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Errors_leading_to_goal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="286472e2-5f1d-4622-a183-2cc7cb4c7418">
+      <ID>Fouls</ID>
+      <Name>Fouls</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="080a9ff4-e54d-4522-a841-d72c7a38879d">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6e2990fb-5074-40db-8248-a328df77575a">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Fouls</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ca13144f-bc21-4e05-a241-f8c82c50a576">
+      <ID>Freekicks Scored</ID>
+      <Name>Freekicks Scored</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="329a00df-d5a4-49b4-af3a-bd50c5b21302">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0796412-56cb-4c7a-ad4e-d09b831c9af0">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Freekicks_scored</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a84507eb-89f4-426e-8cfa-8fd29a0ea278">
+      <ID>Goal Kicks</ID>
+      <Name>Goal Kicks</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f665ba5-763e-4c59-b232-fec0dc1a09f2">
+          <DataType>SmallInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4328fe37-84ab-407a-91a7-d550ef74b1ac">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goal_Kicks</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ea4b399a-091e-4345-9119-4e03a91606ce">
+      <ID>Goals</ID>
+      <Name>Goals</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="41ad0f22-c20e-48d1-9a7b-f9a65c700b06">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b1e59db8-3ea8-4a21-bd47-c25e34c55a65">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goals</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b7e48543-3738-4eda-a06f-3a4e4dce8e92">
+      <ID>Goals Conceded</ID>
+      <Name>Goals Conceded</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7b948d6-8cb3-43a4-9c33-2c0905c86a45">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00af3eb0-6d49-419c-940e-87b69eb5c567">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goals_conceded</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7be44def-85ad-46ad-9666-4373b6c2e800">
+      <ID>Goals Per Match</ID>
+      <Name>Goals Per Match</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ceca1690-630a-4fa4-ad46-10443aa7db78">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3cc61683-2782-4643-b5d4-febca4f6c3e0">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goals_per_match</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3c0c4ede-e5aa-4748-9303-fcb5ebc98955">
+      <ID>Goals With Left Foot</ID>
+      <Name>Goals With Left Foot</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ea58be82-1d3b-4e3d-bd8a-a4bc71f3efba">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8162ebdc-6041-412a-aea0-4186efc46ff6">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goals_with_left_foot</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7e3fe7d0-a350-45d3-910d-e3c546607847">
+      <ID>Goals With Right Foot</ID>
+      <Name>Goals With Right Foot</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce103679-56fd-4a81-80a2-e3144a4e7cda">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed99fc9c-b9f8-4db8-9e3b-a1580563331c">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Goals_with_right_foot</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9973b6cf-5d4d-4d8e-b8c2-8c2278bfafeb">
+      <ID>Headed Clearance</ID>
+      <Name>Headed Clearance</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95a79e55-ee54-4b94-99d9-fe9dc747d5a8">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e387aec-91b6-4728-a2b1-af06428a2f05">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Headed_Clearance</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8cdf41a0-931f-46e6-86b2-f448b7f9d48b">
+      <ID>Headed Goals</ID>
+      <Name>Headed Goals</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d6cd3214-1371-40f6-8599-1e525bde75bf">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdcd1304-e6b1-4426-9c2b-8df7af321d19">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Headed_goals</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="bf8329ba-15cf-433e-ad48-167eaf341149">
+      <ID>High Claims</ID>
+      <Name>High Claims</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ebb2ad08-0925-4710-a299-a4b47046b324">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af4fd72a-15d5-4c1a-b3a2-a2de4dea060d">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>High_Claims</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7f529e66-9c8d-4000-bfd6-3d612225eb88">
+      <ID>Hit Woodwork</ID>
+      <Name>Hit Woodwork</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="868380a1-cba4-4c00-b68d-f47217437425">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8d951664-80d3-4e0d-ba5b-74409d3b9359">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Hit_woodwork</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="723e2d8b-e043-4784-9d4b-9a988e0785e0">
+      <ID>Interceptions</ID>
+      <Name>Interceptions</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c9e83f51-433c-4cc7-9cc4-c5c8df42bf2d">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="391c389b-a367-4514-97d0-fbba72b9a117">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Interceptions</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="41858a0a-bc0e-495e-a507-0201764613a6">
+      <ID>Last Man Tackles</ID>
+      <Name>Last Man Tackles</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="577341fb-335c-48a0-a074-91abeac42f11">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed4f5aad-24a4-4bfb-950c-c81db80093fe">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Last_man_tackles</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6d2e3747-0ec8-45d5-9b12-cc6606504bd7">
+      <ID>Name</ID>
+      <Name>Name</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6e38564-9cea-46fb-b748-3aa505de71b7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26f22983-2458-468c-bfdb-b940ab77c77b">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="86fd7dd0-2d0a-41d8-bcc0-6845188c6698">
+      <ID>Offsides</ID>
+      <Name>Offsides</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f437c0e0-7ddd-4b54-8ac0-58838e64f023">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99622291-6709-44e6-92f3-d7b49949d077">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Offsides</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="000c472d-5d07-4f53-86f2-08bbbd6df0e2">
+      <ID>Own Goals</ID>
+      <Name>Own Goals</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68d30bf6-59cd-4a0c-a9fb-d62de3e7d12d">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="669f60fd-798a-4f96-809b-49e755baf228">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Own_goals</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="914e8dd4-a15a-4c0e-b289-d970f7dec120">
+      <ID>Penalties Saved</ID>
+      <Name>Penalties Saved</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3561ff9d-b38d-497f-9a12-8313f65414a9">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bada6877-dac5-4cb4-b34d-547f9ff99200">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Penalties_saved</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="85ce99c0-ccb6-4eb6-970c-6e2f6ef7a577">
+      <ID>Penalties Scored</ID>
+      <Name>Penalties Scored</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91fc4255-ac36-437d-b0f6-a61a3f137662">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af881937-26d1-437e-8400-da369a2fcd6b">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Penalties_scored</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c3255734-c496-4fb0-bbfb-916e8f4f338a">
+      <ID>Position</ID>
+      <Name>Position</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="faa20a56-a226-4189-b093-554634edb94a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c8042a4-a7f1-4463-8b70-7de6896419be">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Position</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="190a84a0-d61d-4be3-872d-66180b8a511d">
+      <ID>Punches</ID>
+      <Name>Punches</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c5eeb78a-7ef9-4d3f-b05e-9de2f217967a">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c4a41b9-5e8e-4106-bdbc-f8d5ce0752bf">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Punches</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c4e11027-9f18-4300-8c79-552c0af78f78">
+      <ID>Saves</ID>
+      <Name>Saves</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="536e962b-0faa-4d1f-aae2-2da0db44b5ab">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5953fa4f-177e-4110-8502-16572c39e9e2">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Saves</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6bd41744-77f8-46cf-833c-314afee4f6cc">
+      <ID>Shooting Accuracy</ID>
+      <Name>Shooting Accuracy</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7acdb8e-f762-4d93-9436-cbc3acc92fd0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d294cf61-6475-49e9-94ef-aed0fdb22e12">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Shooting_accuracy</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="dbc1bc9a-89e4-4e04-8f55-4eb9a328d906">
+      <ID>Shots</ID>
+      <Name>Shots</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="79ed6b58-0f65-4deb-bfba-63b992241914">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="71c38368-9e25-4579-bc7a-34e3a4c53dff">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Shots</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b45adaaf-d054-42dc-a21d-47deb17e44ef">
+      <ID>Shots On Target</ID>
+      <Name>Shots On Target</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4578c1e-0c2e-4b22-8c44-5cc485c96fa6">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="761201dd-4c54-43a6-ad1d-703e655b1ca1">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Shots_on_target</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="95b0bc94-bc6f-4a2b-9841-8450a115aef9">
+      <ID>Successful 50 50s</ID>
+      <Name>Successful 50 50s</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ed39bc65-4a91-46ee-9a9f-00dea08ab49b">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bf33415b-f04b-4d97-9cdf-d6b07c8b640b">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Successful_50_50s</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e056a93d-f650-4012-9a53-93fe3835da9a">
+      <ID>Sweeper Clearances</ID>
+      <Name>Sweeper Clearances</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5cfad5df-38c3-4056-a853-bdf848f2d34d">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="40882ffd-7168-4062-883d-74cb8893859e">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Sweeper_clearances</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="da4cd230-0134-41c5-a2d1-aece8c6be7ee">
+      <ID>Tackle Success</ID>
+      <Name>Tackle Success</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e9f6522b-e3e1-418e-af3c-1dc4a7ec9f1a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b29718f0-7038-4a3a-8abc-9ad97cc13b7f">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Tackle_success</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6a311d1a-14a7-48e3-b57f-c2fae5f966ec">
+      <ID>Tackles</ID>
+      <Name>Tackles</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74892ef4-639e-4baa-bcb5-5b85ff3ab12a">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1aa69784-1362-4676-9b12-d53d7447eeff">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Tackles</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="49c577ed-eea5-4d72-a51c-2825f82cc020">
+      <ID>Through Balls</ID>
+      <Name>Through Balls</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="54f533dd-4d84-4079-8a00-7ad6d5a13d32">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="65afc94a-9e63-4776-9517-46d9641df637">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Through_balls</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0927b54f-1c6c-429a-9afb-f29feb9d0f9a">
+      <ID>Throw Outs</ID>
+      <Name>Throw Outs</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4388d0fe-c627-4259-8c93-53485a932864">
+          <DataType>UnsignedTinyInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="937f811f-999b-415c-ab64-6c01d027facf">
+            <TableID>dbo_pl_15-16</TableID>
+            <ColumnID>Throw_outs</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="177804d7-418b-4e2b-9356-c3f541e6555a">
+      <ID>Player position</ID>
+      <Name>Player position</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="4e5d80a4-291e-45d5-a7b4-fe937938c821">
+          <ID>Assists</ID>
+          <Name>Assists</Name>
+          <SourceColumnID>Assists</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e60af789-54ce-4b25-b7f1-9efd474e223c">
+          <ID>Big Chances Created</ID>
+          <Name>Big Chances Created</Name>
+          <SourceColumnID>Big Chances Created</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="243f0744-3152-4356-9e56-7627ac6ab4b3">
+          <ID>Big Chances Missed</ID>
+          <Name>Big Chances Missed</Name>
+          <SourceColumnID>Big Chances Missed</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="8ee006c6-f9aa-4908-816e-765a8e32eb2f">
+          <ID>Blocked Shots</ID>
+          <Name>Blocked Shots</Name>
+          <SourceColumnID>Blocked Shots</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="43628098-5f37-434c-9a05-5e84e8e54c59">
+          <ID>Catches</ID>
+          <Name>Catches</Name>
+          <SourceColumnID>Catches</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6b1d929d-dd29-46d4-a502-da7609aee5cd">
+          <ID>Clean Sheets</ID>
+          <Name>Clean Sheets</Name>
+          <SourceColumnID>Clean Sheets</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="4e569eb3-1efb-4cff-9de3-7a930e92b5ed">
+          <ID>Clearances Off Line</ID>
+          <Name>Clearances Off Line</Name>
+          <SourceColumnID>Clearances Off Line</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="25bf80fa-2fdc-4eab-86b1-8a5bf50c6967">
+          <ID>Cross Accuracy</ID>
+          <Name>Cross Accuracy</Name>
+          <SourceColumnID>Cross Accuracy</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0128d3d4-c596-45bb-b6ed-672cbf5d821a">
+          <ID>Errors Leading To Goal</ID>
+          <Name>Errors Leading To Goal</Name>
+          <SourceColumnID>Errors Leading To Goal</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="b6d2ec10-8aec-4877-99f1-95af9b7cd46c">
+          <ID>Fouls</ID>
+          <Name>Fouls</Name>
+          <SourceColumnID>Fouls</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="932815e7-9773-428f-b729-440de12ca108">
+          <ID>Freekicks Scored</ID>
+          <Name>Freekicks Scored</Name>
+          <SourceColumnID>Freekicks Scored</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7f0fe948-a7ce-4d17-9036-d42ef048f28f">
+          <ID>Goal Kicks</ID>
+          <Name>Goal Kicks</Name>
+          <SourceColumnID>Goal Kicks</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5a90f199-f006-435f-b637-1c12c71371b3">
+          <ID>Goals</ID>
+          <Name>Goals</Name>
+          <SourceColumnID>Goals</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="cc27325d-166f-45a5-9848-22000c670072">
+          <ID>Goals Conceded</ID>
+          <Name>Goals Conceded</Name>
+          <SourceColumnID>Goals Conceded</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ba452fc3-b57d-4ecc-9480-8cd42f7c7cee">
+          <ID>Goals Per Match</ID>
+          <Name>Goals Per Match</Name>
+          <SourceColumnID>Goals Per Match</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="9c3f7dd5-1fef-43b8-915b-9a9191baa4aa">
+          <ID>Goals With Left Foot</ID>
+          <Name>Goals With Left Foot</Name>
+          <SourceColumnID>Goals With Left Foot</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="6376beb8-7058-4456-af81-81a1a1370d6d">
+          <ID>Goals With Right Foot</ID>
+          <Name>Goals With Right Foot</Name>
+          <SourceColumnID>Goals With Right Foot</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="b8b176c0-179e-4ccd-9e5d-06c05bb9ff61">
+          <ID>Headed Clearance</ID>
+          <Name>Headed Clearance</Name>
+          <SourceColumnID>Headed Clearance</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="fc4efa3a-d136-47c5-99d3-a2038f23bd9e">
+          <ID>Headed Goals</ID>
+          <Name>Headed Goals</Name>
+          <SourceColumnID>Headed Goals</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e755fbfc-437d-4b18-b076-2526cf09a748">
+          <ID>High Claims</ID>
+          <Name>High Claims</Name>
+          <SourceColumnID>High Claims</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a4b0fb77-27aa-4e96-9f7b-f0429dacb99b">
+          <ID>Hit Woodwork</ID>
+          <Name>Hit Woodwork</Name>
+          <SourceColumnID>Hit Woodwork</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="90b0aaf8-07c1-4612-99e0-9cd412dfa2b4">
+          <ID>Interceptions</ID>
+          <Name>Interceptions</Name>
+          <SourceColumnID>Interceptions</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e5e7354e-866e-43ef-b24a-f9379811ea04">
+          <ID>Last Man Tackles</ID>
+          <Name>Last Man Tackles</Name>
+          <SourceColumnID>Last Man Tackles</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6c6c6c90-5fb7-4680-8e76-846346935e20">
+          <ID>Name</ID>
+          <Name>Name</Name>
+          <SourceColumnID>Name</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="a531742c-d862-47de-a105-47378ed54abc">
+          <ID>Offsides</ID>
+          <Name>Offsides</Name>
+          <SourceColumnID>Offsides</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="332fe3fb-7cb1-4379-9666-7ad0fc4504bb">
+          <ID>Own Goals</ID>
+          <Name>Own Goals</Name>
+          <SourceColumnID>Own Goals</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="503eba98-9e24-4f3b-acc5-b74dad43cb69">
+          <ID>Penalties Saved</ID>
+          <Name>Penalties Saved</Name>
+          <SourceColumnID>Penalties Saved</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7dfa9b8d-2c97-4649-ba6e-8c322f455327">
+          <ID>Penalties Scored</ID>
+          <Name>Penalties Scored</Name>
+          <SourceColumnID>Penalties Scored</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5f2c5a8b-9bbd-4e39-861b-02e696f3579d">
+          <ID>Position</ID>
+          <Name>Position</Name>
+          <SourceColumnID>Position</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="96dce498-b819-4ae7-83bd-9ba02ad089a5">
+          <ID>Punches</ID>
+          <Name>Punches</Name>
+          <SourceColumnID>Punches</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c79409c0-0963-4d6b-91db-d223a052a2db">
+          <ID>Saves</ID>
+          <Name>Saves</Name>
+          <SourceColumnID>Saves</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a40113e0-285c-4a7c-98ef-22ebb7d279bb">
+          <ID>Shooting Accuracy</ID>
+          <Name>Shooting Accuracy</Name>
+          <SourceColumnID>Shooting Accuracy</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="68929019-1033-4772-a3fe-154f4f8d127c">
+          <ID>Shots</ID>
+          <Name>Shots</Name>
+          <SourceColumnID>Shots</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="aac5b483-c666-4414-8cdf-a805b9400226">
+          <ID>Shots On Target</ID>
+          <Name>Shots On Target</Name>
+          <SourceColumnID>Shots On Target</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="c87c70df-ec34-42bb-9e11-c0f0a8e5b38c">
+          <ID>Successful 50 50s</ID>
+          <Name>Successful 50 50s</Name>
+          <SourceColumnID>Successful 50 50s</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="868e6a02-212f-4514-9777-3b0d9ceb9f71">
+          <ID>Sweeper Clearances</ID>
+          <Name>Sweeper Clearances</Name>
+          <SourceColumnID>Sweeper Clearances</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="84d864ce-d752-4305-90d2-fa26331f72de">
+          <ID>Tackle Success</ID>
+          <Name>Tackle Success</Name>
+          <SourceColumnID>Tackle Success</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1fd68363-ae00-4fe4-9317-f53c549d78b1">
+          <ID>Tackles</ID>
+          <Name>Tackles</Name>
+          <SourceColumnID>Tackles</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="4e725561-9441-4059-8406-345383a24388">
+          <ID>Through Balls</ID>
+          <Name>Through Balls</Name>
+          <SourceColumnID>Through Balls</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="4ff85d23-e9e8-4e3e-95e2-90b911b1b833">
+          <ID>Throw Outs</ID>
+          <Name>Throw Outs</Name>
+          <SourceColumnID>Throw Outs</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+  <ddl100_100:HoldoutMaxCases>1000</ddl100_100:HoldoutMaxCases>
+</MiningStructure>
