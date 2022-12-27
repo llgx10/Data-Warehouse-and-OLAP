@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>GUN VIOLENCE</Id>
+            <Name>GUN VIOLENCE</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARWoMIcvPEEOIwFFNffGhywAAAAAaAAAARwBVAE4AIABWAEkATwBMAEUATgBDAEUAAAAQZgAAAAEAACAAAADkgfGT41Gw4Yj5+RPrpQ4xHvUwc+YYyGjCkJnp83ic+wAAAAAOgAAAAAIAACAAAACQqIU/i1uh0215rhdKR4Flh+IHiF+D++pamExVRqiQ+RAAAAB7a/viF152FzfCASfC+foPQAAAAPI/CjDEyS1EhOdK/UdvesdW04rf7uD45DIiLOlaHwBN/KiyLgzoEPab9Dzv9uwSq78kk9f8Aol5tIrtp69JOjg=</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>GUN VIOLENCE</Id>
+            <Name>GUN VIOLENCE</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARWoMIcvPEEOIwFFNffGhywAAAAAaAAAARwBVAE4AIABWAEkATwBMAEUATgBDAEUAAAAQZgAAAAEAACAAAABaBcjuGmVehUP6GBqlee6cVhEkQQmICgZLAP/u6zJ7FAAAAAAOgAAAAAIAACAAAAAXPlusFHAgZp9UQNTPHRE9fXyWRZASHcf+77DJruBAWRAAAADuGj8YasMJgGzFnm8wsSt7QAAAAODuW9xY1WgI9OlyZgAxeKN9Hh9/YL/1dP+FIEVTqKI/mbYIKQei8Sk3FWaI7SqxJFRszkOq2v9UoISTcQA/6J8=</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>LAPTOP-KKUBV1MT\MSSQLSERVER1</TargetServer>
+        <TargetDatabase>SSAS_OLAP</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

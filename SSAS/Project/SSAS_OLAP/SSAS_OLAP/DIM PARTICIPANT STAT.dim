@@ -1,0 +1,233 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="99bc40da-0397-40b1-850d-9dad2e102a8d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM PARTICIPANT STAT</ID>
+  <Name>DIM PARTICIPANT STAT</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2017" scrolltop="-5927" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8149" y="15002" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_PARTICIPANT_STAT" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4075" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0f00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_PARTICIPANT_STAT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2017</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5927</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="06884401-085c-44d8-88f4-9666ff446f41">
+    <DataSourceViewID>GUN VIOLENCE</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="9bc24088-fa6b-47cd-baa7-21d4789f82aa">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="fbf92a72-d27c-44df-8ae0-ec7a7ead2d0a">
+      <ID>Participant Stat Id</ID>
+      <Name>Participant Stat Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f5e7f9ac-55b6-4482-bbc3-b3b60aa18c17">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a582fac-a285-4964-9926-ccbe39dea5e1">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>participant_stat_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d15f5c5a-e024-492b-85ca-2c9b2158cb2a">
+          <AttributeID>Participant Age</AttributeID>
+          <Name>Participant Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="952b105c-f7ab-461b-8f3f-64e5239b6ca0">
+          <AttributeID>Participant Relationship</AttributeID>
+          <Name>Participant Relationship</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="63e563cd-3fb6-40f9-89e9-570c58f705b3">
+          <AttributeID>Male</AttributeID>
+          <Name>Male</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ef53371-a336-4bb0-97e8-12b5623deb90">
+          <AttributeID>Female</AttributeID>
+          <Name>Female</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b85cc06c-033d-478d-b145-9b9366edd171">
+      <ID>Participant Age</ID>
+      <Name>Participant Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="668e1875-944f-4a5c-968c-9ef5f4aa0599">
+          <DataType>WChar</DataType>
+          <DataSize>800</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f85f604a-5358-46f6-ae16-67e656fe66b4">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>participant_age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b3e3d332-457a-4afb-9608-610894745949">
+      <ID>Participant Relationship</ID>
+      <Name>Participant Relationship</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2435cb68-0cc1-4a0c-a432-3b68c2cfedf2">
+          <DataType>WChar</DataType>
+          <DataSize>800</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bc3dbea5-74ae-4ef6-9b81-4e0c674ee493">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>participant_relationship</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d181b5e9-e0b6-410d-b1af-91889947cc6c">
+        <DataType>WChar</DataType>
+        <DataSize>800</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="78e92dab-9910-45d2-9f09-a9b21717e5f5">
+          <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+          <ColumnID>participant_relationship</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0d6b9b8e-9886-4cb0-9a12-2b8eab149f2a">
+      <ID>Male</ID>
+      <Name>Male</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26f4a7e4-4018-46a0-82f0-5e5bf6bd37a4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15329a55-939b-49f6-bd8b-15b21af65439">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>male</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8de9d0c-f4af-437c-be18-6c4988512e6c">
+      <ID>Female</ID>
+      <Name>Female</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d244edb-3f1b-4b23-80ba-9cae6424d36a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75e272b5-e9ab-4ba8-84fa-e13adb4dd8e4">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>female</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3f098f78-c592-435b-a11c-3b28c4cc7346">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36e5c960-7550-486b-98fb-e955ee84a893">
+            <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+            <ColumnID>male</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="79dce770-9868-4d90-a733-8f1a930a5ad9">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f8ed00bd-379c-4e6f-9384-c33a365b1998">
+          <TableID>dbo_DIM_PARTICIPANT_STAT</TableID>
+          <ColumnID>female</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="9449e727-6386-4be7-bb28-39dd5a93c445">
+      <ID>Hierarchy</ID>
+      <Name>GENDER</Name>
+      <Levels>
+        <Level dwd:design-time-name="1d730c7f-fd57-47b4-be98-0c7fa2fa5d5c">
+          <ID>Female</ID>
+          <Name>Female</Name>
+          <SourceAttributeID>Female</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="fb21378c-89d6-4fb6-a74e-3e078ed7d775">
+          <ID>Male</ID>
+          <Name>Male</Name>
+          <SourceAttributeID>Male</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="828c63bf-61a1-4cc0-93d2-dc558ac7e86e">
+      <ID>Hierarchy 1</ID>
+      <Name>RELATIONSHIP</Name>
+      <Levels>
+        <Level dwd:design-time-name="a8104ab3-7c8f-4a8c-a003-3aba55bcac70">
+          <ID>Participant Relationship</ID>
+          <Name>Participant Relationship</Name>
+          <SourceAttributeID>Participant Relationship</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

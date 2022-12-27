@@ -1,0 +1,159 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9e266f18-ca6a-45a3-bc0f-986fca819460" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>GUN VIOLENCE</ID>
+  <Name>GUN VIOLENCE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>GUN VIOLENCE</DataSourceID>
+  <Schema>
+    <xs:schema id="GUN_x0020_VIOLENCE" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="GUN_x0020_VIOLENCE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="c7792d9f-fea1-41b7-b27d-b056ab87eca2">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FACT" msprop:design-time-name="1562c4b9-91e2-48dc-9a95-429a75c35982" msprop:DbTableName="FACT" msprop:FriendlyName="FACT" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="incident_id" msprop:design-time-name="b70c9d60-074d-496a-b7b8-73d2eac723fd" msprop:DbColumnName="incident_id" msprop:FriendlyName="incident_id" type="xs:int" />
+                  <xs:element name="date" msprop:design-time-name="8074a6f9-0567-44af-9464-a8a985ae3647" msprop:DbColumnName="date" msprop:FriendlyName="date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="location_id" msprop:design-time-name="667caf7f-2724-4764-9745-fd727b0135ce" msprop:DbColumnName="location_id" msprop:FriendlyName="location_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="n_killed" msprop:design-time-name="8af5d70f-4efe-4696-8699-e553a6a0692a" msprop:DbColumnName="n_killed" msprop:FriendlyName="n_killed" type="xs:int" minOccurs="0" />
+                  <xs:element name="n_injured" msprop:design-time-name="10500853-45e4-4546-90ab-5b7798af9587" msprop:DbColumnName="n_injured" msprop:FriendlyName="n_injured" type="xs:int" minOccurs="0" />
+                  <xs:element name="n_gun_involved" msprop:design-time-name="d7a54df8-d909-4385-ae39-af3b12721e1f" msprop:DbColumnName="n_gun_involved" msprop:FriendlyName="n_gun_involved" type="xs:int" minOccurs="0" />
+                  <xs:element name="gun_stolen" msprop:design-time-name="b5b544c9-ff86-4a0d-899b-957603f199c8" msprop:DbColumnName="gun_stolen" msprop:FriendlyName="gun_stolen" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="800" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gun_type" msprop:design-time-name="72e7fd3c-723b-48b6-9dae-b11301dd6772" msprop:DbColumnName="gun_type" msprop:FriendlyName="gun_type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="800" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="participant_stat_id" msprop:design-time-name="43db840f-d550-43c4-8e7e-68053fa0832f" msprop:DbColumnName="participant_stat_id" msprop:FriendlyName="participant_stat_id" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_LOCATION" msprop:design-time-name="39a4e152-ab52-4751-8fd5-1cb43f6b4696" msprop:DbTableName="DIM_LOCATION" msprop:FriendlyName="DIM_LOCATION" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="location_id" msprop:design-time-name="64cc903d-9469-441b-8c32-fc40fb918e9b" msprop:DbColumnName="location_id" msprop:FriendlyName="location_id" type="xs:int" />
+                  <xs:element name="state" msprop:design-time-name="763c9e4d-f63f-4879-8897-98c1e28bb13c" msprop:DbColumnName="state" msprop:FriendlyName="state">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="city_or_county" msprop:design-time-name="e35c8b8b-e760-4579-901f-199b538b7949" msprop:DbColumnName="city_or_county" msprop:FriendlyName="city_or_county">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_PARTICIPANT_STAT" msprop:design-time-name="5155d096-7250-46fa-a465-6b6fd224db10" msprop:DbTableName="DIM_PARTICIPANT_STAT" msprop:FriendlyName="DIM_PARTICIPANT_STAT" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="participant_stat_id" msprop:design-time-name="bf1b6a4d-03dc-4f8d-9c8f-57b7209c5f95" msprop:DbColumnName="participant_stat_id" msprop:FriendlyName="participant_stat_id" type="xs:int" />
+                  <xs:element name="participant_age" msprop:design-time-name="e7f2ada4-6f5b-467a-8af7-6396218ab344" msprop:DbColumnName="participant_age" msprop:FriendlyName="participant_age" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="800" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="participant_relationship" msprop:design-time-name="5629b611-51c8-4a9b-a86c-84b961a3811b" msprop:DbColumnName="participant_relationship" msprop:FriendlyName="participant_relationship" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="800" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="male" msprop:design-time-name="cdf69d73-16b5-47a2-a5e5-80ca5ba95696" msprop:DbColumnName="male" msprop:FriendlyName="male" type="xs:int" minOccurs="0" />
+                  <xs:element name="female" msprop:design-time-name="515e7fc6-195e-4932-a8c1-4f895a29c92d" msprop:DbColumnName="female" msprop:FriendlyName="female" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_DATE" msprop:design-time-name="686f8c0b-96c8-44f9-a90a-5e2121503b9a" msprop:DbTableName="DIM_DATE" msprop:FriendlyName="DIM_DATE" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date" msprop:design-time-name="3ade0366-b4ca-439f-9a1c-c76a383f273b" msprop:DbColumnName="date" msprop:FriendlyName="date" type="xs:dateTime" />
+                  <xs:element name="month" msprop:design-time-name="327b2a43-1af8-46f8-a04e-8ead7e775ece" msprop:DbColumnName="month" msprop:FriendlyName="month" type="xs:int" minOccurs="0" />
+                  <xs:element name="year" msprop:design-time-name="c2b66e55-cc00-4dfc-8e7a-a1af996fa22f" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" minOccurs="0" />
+                  <xs:element name="quarter" msprop:design-time-name="efff3d13-b62e-4a1c-a6a0-b83ee964f27f" msprop:DbColumnName="quarter" msprop:FriendlyName="quarter" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_LOCATION" />
+          <xs:field xpath="location_id" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_PARTICIPANT_STAT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_PARTICIPANT_STAT" />
+          <xs:field xpath="participant_stat_id" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_DATE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_DATE" />
+          <xs:field xpath="date" />
+        </xs:unique>
+        <xs:keyref name="FK__FACT__participan__6D0D32F4" refer="dbo_DIM_PARTICIPANT_STAT_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="participant_stat_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__date__6B24EA82" refer="dbo_DIM_DATE_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="date" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__location_i__6C190EBB" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="location_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <GUN_x0020_VIOLENCE xmlns="" />
+  </Schema>
+</DataSourceView>
