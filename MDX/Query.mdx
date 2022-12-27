@@ -1,0 +1,140 @@
+﻿-- Câu 1: Số vụ xả súng tại ban Nevada qua từng năm
+SELECT{ [Measures].[FACT Count]} ON COLUMNS, 
+{[DIM DATE].[Year].members} ON Rows
+From [GUN VIOLENCE]
+WHERE [DIM LOCATION].[State].&[Nevada];
+ 
+
+
+-- Câu 2: Tìm ra ngày chết chóc nhất của nước Mỹ năm 2014--
+select [Measures].[n Killed] on columns,
+	Head(
+	Order(
+	[Dim DATE].[Date].children,
+	[Measures].[n Killed], Desc) ,5) on rows
+from [GUN VIOLENCE]
+WHERE [DIM DATE].[Year].&[2014];
+ 
+-- Câu 3: Theo từng tháng, năm liệt kê lượng người liên quan tới xả súng ở từng bang (Drill down)
+Select Non empty{[DIM LOCATION].[State].members*[Measures].[FACT Count]} on Columns,
+	DrillDownLevel(
+		DrillDownLevel([DIM DATE].[Y_M])
+		)
+	
+ on Rows
+From [GUN VIOLENCE];
+ 
+--Câu 4 Tên tiểu bang có số lượng người tử vong >500 trong các vụ xả súng Năm 2014
+Select {[Measures].[FACT Count]} on columns,
+{FILTER ({[DIM LOCATION].[State].CHILDREN},[Measures].[n Killed] > 500)} on Rows
+From [GUN VIOLENCE]
+Where [DIM DATE].[Year].&[2014];
+ 
+
+--Câu 5 với mỗi tiểu ban, đưa ra 3 thành phố có số vụ xả súng nhiều nhất
+Select {[Measures].[FACT count]} on Columns,
+{Generate(
+	[DIM LOCATION].[State].Children,
+	TopCount({ 
+		[DIM LOCATION].[State].CurrentMember*[DIM LOCATION].[City Or County] .Children}
+		,3,[Measures].[FACT Count]
+	)
+)} on Rows
+From [GUN VIOLENCE];
+ 
+
+--Câu 6 Tìm ra top 3 tiểu bang an toàn nhất nước Mỹ trong năm 2014
+select {[Measures].[FACT count]} on columns,
+
+	BottomCount([DIM LOCATION].[State].Children,3,[Measures].[FACT count])on rows
+from [GUN VIOLENCE]
+where [DIM DATE].[Year].&[2014];
+  
+
+
+--Câu 7 Tìm ra các thành phố có số vụ xả súng >10 và <20
+ Select {[Measures].[FACT count]} on Columns,
+NON EMPTY
+	{intersect(
+		{FILTER([DIM LOCATION].[City Or County].CHILDREN,[Measures].[FACT count]>=10)} 
+		,{FILTER([DIM LOCATION].[City Or County].CHILDREN,[Measures].[FACT count]<=20)} 
+		)} on rows
+from [GUN VIOLENCE];
+ 
+-- Câu 8 Liệt kê số vụ xả súng của các tiểu ban nằm ngoài DC
+Select {[Measures].[FACT Count]} on columns,
+{except([DIM LOCATION].[State].Children,[DIM LOCATION].[State].&[District of Columbia])}
+	on Rows
+From [GUN VIOLENCE];  
+
+-- Câu 9 Tính tỉ lệ % vụ xả súng có nữ liên quan.
+WITH 
+   MEMBER [Measures].[Percentage] AS
+   [Measures].[Female]/
+   ([Measures].[FACT Count]), 
+   FORMAT_STRING = 'percent'
+SELECT 
+NON EMPTY {[Measures].[Percentage] } ON COLUMNS, 
+NON EMPTY {[DIM PARTICIPANT STAT].[GENDER]} ON ROWS 
+FROM [GUN VIOLENCE];
+ 
+-- Câu 10 Thống kê số vụ xả súng theo quan hệ của nạn nhân và hung thủ
+SELECT 
+NON EMPTY {[Measures].[Participant Relationship Count - DIM PARTICIPANT STAT] } ON COLUMNS, 
+NON EMPTY {[DIM PARTICIPANT STAT].[Participant Relationship].members} ON ROWS 
+FROM [GUN VIOLENCE] ; 
+
+
+--11 Tỉ lệ giữa nam nữ trong các vụ xả súng--
+WITH 
+   MEMBER [Measures].[Female Percentage] AS
+   [Measures].[Female]/
+   ([Measures].[Female]+[Measures].[Male]), 
+   FORMAT_STRING = 'percent'
+   MEMBER [Measures].[Male Percentage] AS
+   [Measures].[Male]/
+   ([Measures].[Female]+[Measures].[Male]), 
+   FORMAT_STRING = 'percent'
+SELECT 
+NON EMPTY {[Measures].[Female Percentage],[Measures].[Male Percentage]} ON COLUMNS, 
+NON EMPTY {[DIM PARTICIPANT STAT].[GENDER]} ON ROWS 
+FROM [GUN VIOLENCE];
+ 
+
+
+--12.trung bình 1 ngày có bao nhiêu người chết và bị thương--
+WITH 
+   MEMBER [Measures].[Killed Average] AS
+   [Measures].[n Killed]/834, 
+   FORMAT_STRING = '##0.00'
+   MEMBER [Measures].[Injured Average] AS
+   [Measures].[n Injured]/834, 
+   FORMAT_STRING = '##0.00'
+SELECT 
+NON EMPTY {([Measures].[Killed Average]), [Measures].[Injured Average]} ON COLUMNS, 
+NON EMPTY {[DIM LOCATION].[State]} ON ROWS 
+FROM [GUN VIOLENCE];
+ 
+--13. thống kê top 3 các nguyên nhân gây xả súng hàng đầu--
+
+select {[Measures].[Participant Relationship Count]} on columns,
+NON EMPTY
+	TopCount([DIM PARTICIPANT STAT].[Participant Relationship].children,3,[Measures].[Participant Relationship Count])
+on rows
+from [GUN VIOLENCE];
+ 
+
+
+--14.  bang nhiều người chết vì xả súng nhất và ít nhất--
+SELECT {[Measures].[n Killed]} on columns,
+UNION (
+TOPCOUNT({[DIM LOCATION].[State].children},1,[Measures].[n Killed]),
+BOTTOMCOUNT({[DIM LOCATION].[State].children},1,[Measures].[n Killed])) on rows
+from [GUN VIOLENCE];
+ 
+
+--15. Thống kê số vụ xả súng ở West coast--
+SELECT{ [Measures].[FACT Count]} ON COLUMNS, 
+UNION ({[DIM LOCATION].[State].&[Alaska]},{[DIM LOCATION].[State].&[California]},{[DIM LOCATION].[State].&[Hawaii]},{[DIM LOCATION].[State].&[Oregon]},{[DIM LOCATION].[State].&[Washington]}) ON Rows
+From [GUN VIOLENCE]
+ 
